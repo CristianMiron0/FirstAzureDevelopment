@@ -46,17 +46,17 @@ Which configuration options should you use? To answer, select the appropriate op
 
 Explanation/Reference:
 
-Explanation: Scenario: Shipping website Use Azure Content Delivery Network (CDN) and ensure maximum performance for dynamic content while minimizing latency and costs. 
+    Explanation: Scenario: Shipping website Use Azure Content Delivery Network (CDN) and ensure maximum performance for dynamic content while minimizing latency and costs. 
 
-Tier: Standard 
+    Tier: Standard 
 
-Profile: Akamai 
+    Profile: Akamai 
 
-Optimization: Dynamic site acceleration Dynamic site acceleration (DSA) is available for Azure CDN Standard from Akamai, Azure CDN Standard from Verizon, and Azure CDN Premium from Verizon profiles. 
+    Optimization: Dynamic site acceleration Dynamic site acceleration (DSA) is available for Azure CDN Standard from Akamai, Azure CDN Standard from Verizon, and Azure CDN Premium from Verizon profiles. 
 
-DSA includes various techniques that benefit the latency and performance of dynamic content. Techniques include route and network optimization, TCP optimization, and more. 
+    DSA includes various techniques that benefit the latency and performance of dynamic content. Techniques include route and network optimization, TCP optimization, and more. 
 
-You can use this optimization to accelerate a web app that includes numerous responses that aren't cacheable. Examples are search results, checkout transactions, or real-time data. You can continue to use core Azure CDN caching capabilities for static data.
+    You can use this optimization to accelerate a web app that includes numerous responses that aren't cacheable. Examples are search results, checkout transactions, or real-time data. You can continue to use core Azure CDN caching capabilities for static data.
 
 **Pregunta 2:**
 
@@ -70,17 +70,17 @@ To answer, select the appropriate options in the answer area.
 
 Explanation/Reference: 
 
-Explanation: Box 1: Override Override: Ignore origin-provided cache duration; use the provided cache duration instead. This will not override cache-control: no-cache. Set if missing: Honor origin-provided cache-directive headers, if they exist; otherwise, use the provided cache duration. 
+    Explanation: Box 1: Override Override: Ignore origin-provided cache duration; use the provided cache duration instead. This will not override cache-control: no-cache. Set if missing: Honor origin-provided cache-directive headers, if they exist; otherwise, use the provided cache duration. 
 
-Incorrect: Bypass cache: Do not cache and ignore origin-provided cache-directive headers. 
+    Incorrect: Bypass cache: Do not cache and ignore origin-provided cache-directive headers. 
 
-Box 2: 1 hour All media content must expire from the cache after one hour. 
+    Box 2: 1 hour All media content must expire from the cache after one hour. 
 
-Box 3: Cache every unique URL Cache every unique URL: In this mode, each request with a unique URL, including the query string, is treated as a unique asset with its own cache. For example, the response from the origin server for a request for example.ashx?q=test1 is cached at the POP node and returned for subsequent caches with the same query string. A request for example.ashx?q=test2 is cached as a separate asset with its own time-tolive setting. 
+    Box 3: Cache every unique URL Cache every unique URL: In this mode, each request with a unique URL, including the query string, is treated as a unique asset with its own cache. For example, the response from the origin server for a request for example.ashx?q=test1 is cached at the POP node and returned for subsequent caches with the same query string. A request for example.ashx?q=test2 is cached as a separate asset with its own time-tolive setting. 
 
-Incorrect Answers: Bypass caching for query strings: In this mode, requests with query strings are not cached at the CDN POP node. The POP node retrieves the asset directly from the origin server and passes it to the requestor with each request. 
+    Incorrect Answers: Bypass caching for query strings: In this mode, requests with query strings are not cached at the CDN POP node. The POP node retrieves the asset directly from the origin server and passes it to the requestor with each request. 
 
-Ignore query strings: Default mode. In this mode, the CDN point-of-presence (POP) node passes the query strings from the requestor to the origin server on the first request and caches the asset. All subsequent requests for the asset that are served from the POP ignore the query strings until the cached asset expires.
+    Ignore query strings: Default mode. In this mode, the CDN point-of-presence (POP) node passes the query strings from the requestor to the origin server on the first request and caches the asset. All subsequent requests for the asset that are served from the POP ignore the query strings until the cached asset expires.
 
 **Pregunta 3:**
 
@@ -94,12 +94,12 @@ Explanation/Reference:
 
 Explanation: 
 
-Step 1: A user requests the image.. A user requests a file (also called an asset) by using a URL with a special domain name, such as .azureedge.net. This name can be an endpoint hostname or a custom domain. The DNS routes the request to the best performing POP location, which is usually the POP that is geographically closest to the user. 
+    Step 1: A user requests the image.. A user requests a file (also called an asset) by using a URL with a special domain name, such as .azureedge.net. This name can be an endpoint hostname or a custom domain. The DNS routes the request to the best performing POP location, which is usually the POP that is geographically closest to the user. 
 
-Step 2: If no edge servers in the POP have the.. If no edge servers in the POP have the file in their cache, the POP requests the file from the origin server. The origin server can be an Azure Web App, Azure Cloud Service, Azure Storage account, or any publicly accessible web server. 
+    Step 2: If no edge servers in the POP have the.. If no edge servers in the POP have the file in their cache, the POP requests the file from the origin server. The origin server can be an Azure Web App, Azure Cloud Service, Azure Storage account, or any publicly accessible web server. 
 
-Step 3: The origin server returns the.. The origin server returns the file to an edge server in the POP. An edge server in the POP caches the file and returns the file to the original requestor (Alice). The file remains cached on the edge server in the POP until the time-to-live (TTL) specified by its HTTP headers expires. If the origin server didn't specify a TTL, the default TTL is seven days. 
+    Step 3: The origin server returns the.. The origin server returns the file to an edge server in the POP. An edge server in the POP caches the file and returns the file to the original requestor (Alice). The file remains cached on the edge server in the POP until the time-to-live (TTL) specified by its HTTP headers expires. If the origin server didn't specify a TTL, the default TTL is seven days. 
 
-Step 4: Subsequent requests for.. Additional users can then request the same file by using the same URL that the original user used, and can also be directed to the same POP. 
+    Step 4: Subsequent requests for.. Additional users can then request the same file by using the same URL that the original user used, and can also be directed to the same POP. 
 
-If the TTL for the file hasn't expired, the POP edge server returns the file directly from the cache. This process results in a faster, more responsive user experience.
+    If the TTL for the file hasn't expired, the POP edge server returns the file directly from the cache. This process results in a faster, more responsive user experience.
