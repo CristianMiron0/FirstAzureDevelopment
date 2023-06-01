@@ -1,10 +1,10 @@
 # Preguntas - Tema 2
 
-**¿Qué son las Azure Functions y para qué se utilizan?**
+1. **¿Qué son las Azure Functions y para qué se utilizan?**
 
 Azure Functions es un servicio sin servidor en la nube ofrecido por Microsoft Azure. Permite ejecutar pequeños fragmentos de código en respuesta a eventos como solicitudes HTTP, cambios en bases de datos o mensajes en colas. Se utiliza para procesamiento de eventos en tiempo real, integración de sistemas, tareas programadas y desarrollo de aplicaciones web y móviles. La ventaja principal es la escalabilidad y alta disponibilidad, sin preocuparse por la administración de servidores. Además, ofrece compatibilidad con varios lenguajes de programación.
 
-**¿Cuáles son los desencadenadores (triggers) más comunes en Azure Functions?**
+2. **¿Cuáles son los desencadenadores (triggers) más comunes en Azure Functions?**
 
 En Azure Functions, existen varios desencadenadores (triggers) comunes que puedes utilizar para activar la ejecución de tus funciones. Algunos de los desencadenadores más populares son:
 
@@ -17,7 +17,7 @@ En Azure Functions, existen varios desencadenadores (triggers) comunes que puede
 
 Estos son solo algunos de los desencadenadores más comunes en Azure Functions. La plataforma ofrece una amplia gama de opciones para adaptarse a diferentes escenarios y necesidades, lo que te permite crear funciones reactivas y automatizar diversas tareas en la nube.
 
-**¿Cómo se configura y se despliega una Azure Function?**
+3. **¿Cómo se configura y se despliega una Azure Function?**
 
 La configuración y el despliegue de una Azure Function se pueden realizar siguiendo los siguientes pasos:
 
@@ -52,11 +52,11 @@ Correct Answer: A
 
 Explanation/Reference: 
 
-Explanation: Azure Functions offers built-in integration with Azure Application Insights to monitor functions. 
+    Explanation: Azure Functions offers built-in integration with Azure Application Insights to monitor functions. 
 
-The following areas of Application Insights can be helpful when evaluating the behavior, performance, and errors in your functions: 
+    The following areas of Application Insights can be helpful when evaluating the behavior, performance, and errors in your functions: 
 
-Live Metrics: View metrics data as it's created in near real-time. Failures, Performance, Metrics
+    Live Metrics: View metrics data as it's created in near real-time. Failures, Performance, Metrics
 
 **Pregunta 2:**
 
@@ -70,13 +70,13 @@ Explanation/Reference:
 
 Explanation: 
 
-Scenario: You test the Logic app in a development environment. The following error message displays: '400 Bad Request' Troubleshooting of the error shows an HttpTrigger action to call the RequestUserApproval function. 
+    Scenario: You test the Logic app in a development environment. The following error message displays: '400 Bad Request' Troubleshooting of the error shows an HttpTrigger action to call the RequestUserApproval function. 
 
-Note: If the inbound call's request body doesn't match your schema, the trigger returns an HTTP 400 Bad Request error. 
+    Note: If the inbound call's request body doesn't match your schema, the trigger returns an HTTP 400 Bad Request error. 
 
-Box 1: function If you have an Azure function where you want to use the system-assigned identity, first enable authentication for Azure functions. 
+    Box 1: function If you have an Azure function where you want to use the system-assigned identity, first enable authentication for Azure functions. 
 
-Box 2: system-assigned Your logic app or individual connections can use either the system-assigned identity or a single userassigned identity, which you can share across a group of logic apps, but not both.
+    Box 2: system-assigned Your logic app or individual connections can use either the system-assigned identity or a single userassigned identity, which you can share across a group of logic apps, but not both.
 
 **Pregunta 3:**
 
@@ -102,8 +102,8 @@ Correct Answer: A
 
 Explanation/Reference: 
 
-Explanation: Azure Storage events allow applications to react to events. Common Blob storage event scenarios include image or video processing, search indexing, or any file-oriented workflow. 
+    Explanation: Azure Storage events allow applications to react to events. Common Blob storage event scenarios include image or video processing, search indexing, or any file-oriented workflow. 
 
-Events are pushed using Azure Event Grid to subscribers such as Azure Functions, Azure Logic Apps, or even to your own http listener. 
+    Events are pushed using Azure Event Grid to subscribers such as Azure Functions, Azure Logic Apps, or even to your own http listener. 
 
-Note: Only storage accounts of kind StorageV2 (general purpose v2) and BlobStorage support event integration. Storage (general purpose v1) does not support integration with Event Grid.
+    Note: Only storage accounts of kind StorageV2 (general purpose v2) and BlobStorage support event integration. Storage (general purpose v1) does not support integration with Event Grid.
