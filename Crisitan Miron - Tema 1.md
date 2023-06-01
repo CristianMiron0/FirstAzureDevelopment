@@ -1,10 +1,10 @@
 # Preguntas - Tema 1
 
-**¿Qué es Azure CDN y cuál es su propósito en el despliegue de aplicaciones web?**
+1. **¿Qué es Azure CDN y cuál es su propósito en el despliegue de aplicaciones web?**
 
 Azure CDN es un servicio de entrega de contenido que acelera y mejora la disponibilidad de aplicaciones web. Almacenando en caché contenido estático en servidores distribuidos globalmente, reduce la latencia y acelera la carga para los usuarios. Además, ofrece características como compresión de archivos, manejo de contenido enriquecido y protección contra ataques DDoS. En resumen, Azure CDN optimiza la entrega de contenido estático en aplicaciones web, brindando una experiencia de usuario más rápida y confiable.
 
-**¿Cuáles son los beneficios de utilizar Azure CDN en términos de rendimiento y escalabilidad?**
+2. **¿Cuáles son los beneficios de utilizar Azure CDN en términos de rendimiento y escalabilidad?**
 
 Utilizar Azure CDN ofrece varios beneficios en términos de rendimiento y escalabilidad. Estos son algunos de ellos:
 
@@ -16,7 +16,7 @@ Utilizar Azure CDN ofrece varios beneficios en términos de rendimiento y escala
 
 En resumen, Azure CDN mejora el rendimiento al acelerar la entrega de contenido estático, proporciona escalabilidad global para manejar grandes volúmenes de usuarios y garantiza una mayor disponibilidad al distribuir el tráfico en servidores redundantes. Estos beneficios contribuyen a una experiencia de usuario más rápida y confiable, así como a la capacidad de escalar la aplicación según las necesidades del negocio.
 
-**¿Cómo se configura y se utiliza Azure CDN para acelerar la entrega de contenido estático y dinámico en una aplicación web?**
+3. **¿Cómo se configura y se utiliza Azure CDN para acelerar la entrega de contenido estático y dinámico en una aplicación web?**
 
 Para configurar y utilizar Azure CDN para acelerar la entrega de contenido estático y dinámico en una aplicación web, puedes seguir los siguientes pasos:
 
