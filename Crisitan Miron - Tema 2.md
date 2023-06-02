@@ -66,6 +66,11 @@ HOTSPOT
 
 You need to correct the Azure Logic app error message. Which configuration values should you use? To answer, select the appropriate options in the answer area.
 
+![image-20230602132903410](C:\Users\marin\AppData\Roaming\Typora\typora-user-images\image-20230602132903410.png)
+
+Correct Answer: Box 1: function
+						   Box 2: system-assigned
+
 Explanation/Reference: 
 
 Explanation: 

@@ -36,7 +36,7 @@ Recuerda que la configuración exacta puede variar dependiendo de tu caso de uso
 
 **Pregunta 1:**
 
-QUESTION -- Pagina 4
+QUESTION 1 -- Pagina 4
 
 HOTSPOT 
 
@@ -44,9 +44,17 @@ You need to configure Azure CDN for the Shipping web site.
 
 Which configuration options should you use? To answer, select the appropriate options in the answer area
 
+![image-20230602132103636](C:\Users\marin\AppData\Roaming\Typora\typora-user-images\image-20230602132103636.png)
+
+Correct Answer: Box 1:Standard
+						   Box 2:Akamai 
+						   Box 3:Dynamic site acceleration
+
 Explanation/Reference:
 
-Explanation: Scenario: Shipping website Use Azure Content Delivery Network (CDN) and ensure maximum performance for dynamic content while minimizing latency and costs. 
+Explanation: 
+
+Scenario: Shipping website Use Azure Content Delivery Network (CDN) and ensure maximum performance for dynamic content while minimizing latency and costs. 
 
 Tier: Standard 
 
@@ -64,9 +72,17 @@ QUESTION 8 -- Pagina 199
 
 HOTSPOT 
 
-You are developing an Azure App Service hosted ASP.NET Core web app to deliver video-on-demand streaming media. You enable an Azure Content Delivery Network (CDN) Standard for the web endpoint. Customer videos are downloaded from the web app by using the following example URL: http:// www.contoso.com/content.mp4?quality=1 All media content must expire from the cache after one hour. Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node. You need to configure Azure CDN caching rules. Which options should you use? 
+You are developing an Azure App Service hosted ASP.NET Core web app to deliver video-on-demand streaming media. You enable an Azure Content Delivery Network (CDN) Standard for the web endpoint. Customer videos are downloaded from the web app by using the following example URL: http:// www.contoso.com/content.mp4?quality=1 
 
-To answer, select the appropriate options in the answer area. 
+All media content must expire from the cache after one hour. Customer videos with varying quality must be delivered to the closest regional point of presence (POP) node. 
+
+You need to configure Azure CDN caching rules. Which options should you use? To answer, select the appropriate options in the answer area. 
+
+![image-20230602132424226](C:\Users\marin\AppData\Roaming\Typora\typora-user-images\image-20230602132424226.png)
+
+Correct Answer: Box 1:Override
+						   Box 2:1 hour 
+						   Box 3:Cache every unique URL
 
 Explanation/Reference: 
 
@@ -76,7 +92,9 @@ Incorrect: Bypass cache: Do not cache and ignore origin-provided cache-directive
 
 Box 2: 1 hour All media content must expire from the cache after one hour. 
 
-Box 3: Cache every unique URL Cache every unique URL: In this mode, each request with a unique URL, including the query string, is treated as a unique asset with its own cache. For example, the response from the origin server for a request for example.ashx?q=test1 is cached at the POP node and returned for subsequent caches with the same query string. A request for example.ashx?q=test2 is cached as a separate asset with its own time-tolive setting. 
+Box 3: Cache every unique URL 
+
+Cache every unique URL: In this mode, each request with a unique URL, including the query string, is treated as a unique asset with its own cache. For example, the response from the origin server for a request for example.ashx?q=test1 is cached at the POP node and returned for subsequent caches with the same query string. A request for example.ashx?q=test2 is cached as a separate asset with its own time-tolive setting. 
 
 Incorrect Answers: Bypass caching for query strings: In this mode, requests with query strings are not cached at the CDN POP node. The POP node retrieves the asset directly from the origin server and passes it to the requestor with each request. 
 
@@ -89,6 +107,13 @@ QUESTION 6 -- Pagina 88
 DRAG DROP 
 
 Your company has several websites that use a company logo image. You use Azure Content Delivery Network (CDN) to store the static image. You need to determine the correct process of how the CDN and the Point of Presence (POP) server will distribute the image and list the items in the correct order. In which order do the actions occur? To answer, move all actions from the list of actions to the answer area and arrange them in the correct order.
+
+![image-20230602132539216](C:\Users\marin\AppData\Roaming\Typora\typora-user-images\image-20230602132539216.png)
+
+Correct Answer: Step 1: A user requests the image.. A user requests a file (also called an asset) by using a URL
+						   Step 2: If no edge servers in the POP have the.. If no edge servers in the POP have the file in their cache, the POP requests the file from the origin server
+						   Step 3: The origin server returns the.. The origin server returns the file to an edge server in the POP. An edge server in the POP caches the file and returns the file to the original requestor
+							Step 4: Subsequent requests for.. Additional users can then request the same file by using the same URL that the original user used, and can also be directed to the same POP.
 
 Explanation/Reference: 
 
